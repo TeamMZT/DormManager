@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.dorm.mapper.DormManagerMapper">
+
+    <select id="queryDormManager" resultType="dormmanager">
+        select * from t_dormmanager where userName = #{userName}
+                and password = #{password}
+    </select>
+
+</mapper>
