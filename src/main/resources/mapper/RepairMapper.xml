@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.dorm.mapper.RepairMapper">
+    <!--查询方法
+       id = 方法名
+       resultType = 返回值类型  admin别名
+       #{属性名} - 自动调用传入对象的属性值
+    -->
+    <select id="queryRepList" resultType="repair">
+        select *
+        from t_repair;
+    </select>
+
+    <delete id="deleteRep">
+        delete
+        from t_repair
+        where rId = #{rId};
+    </delete>
+
+    <insert id="insertRep">
+        insert into t_student(dormBuildName, dormName, repairNote, reportDate)
+        values (#{dormBuildName}, #{dormName}, #{repairNote}, #{reportDate});
+    </insert>
+
+    <select id="selectRep" resultType="repair">
+        select *
+        from t_repair
+        where rId = #{rId}；
+    </select>
+
+    <update id="updateRep">
+        update t_repair
+        set dormBuilddName=#{dormBuildName},
+            dormName=#{dormName},
+            repairNote=#{repairName},
+            reportDate=#{reportDate},
+        where rId = #{rId};
+    </update>
+
+</mapper>

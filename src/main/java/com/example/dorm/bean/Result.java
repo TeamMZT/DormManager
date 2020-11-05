@@ -9,7 +9,7 @@ package com.example.dorm.bean;
  */
 public class Result {
     private int code = 0;
-    private String meaasge;
+    private String message;
     private Object data;
 
     public int getCode() {
@@ -20,12 +20,12 @@ public class Result {
         this.code = code;
     }
 
-    public String getMeaasge() {
-        return meaasge;
+    public String getMessage() {
+        return message;
     }
 
-    public void setMeaasge(String meaasge) {
-        this.meaasge = meaasge;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     public Object getData() {
