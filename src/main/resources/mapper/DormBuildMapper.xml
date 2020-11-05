@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.dorm.mapper.DormBuildMapper">
+
+    <insert id="insertDormBuild">
+        insert into t_dormbuild (dormBuildName,dormBuildNote)
+            value(#{dormBuildName},#{dormBuildNote})
+    </insert>
+
+    <delete id="deleteDormBuild">
+        delete from t_dormbuild where dormBuildId = #{dormBuildId}
+    </delete>
+
+    <select id="queryDormBuildList" resultType="dormbuild">
+        select * from t_dormbuild
+    </select>
+
+    <select id="queryDormBuild" resultType="DormBuild">
+        select * from t_dormbuild where //模糊搜索？根据什么搜，搜索框里的${这里写什么}
+    </select>
+
+    <update id="updateBuild">
+        update t_dormbuild set dormBuildName = #{dormBuildName},
+                            dormBuildNote = #{dormBuildNote},
+                                where dormBuildId = #{dormBuildId};
+    </update>
+</mapper>

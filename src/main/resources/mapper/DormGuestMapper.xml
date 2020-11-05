@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.dorm.mapper.DormGuestMapper">
+
+    <insert id="insertDormGuest">
+        insert into t_guest (gName,gSex,gTel,gNote,gDate,gType)
+            value(#{gName},#{gSex},#{gTel},#{gNote},#{gNote},#{gType})
+    </insert>
+
+    <delete id="deleteDormGuest">
+        delete from t_guest where gId = #{gId}
+    </delete>
+
+    <select id="queryDormGuestList" resultType="dormguest">
+        select * from t_guest
+    </select>
+
+    <select id="queryDormGuest" resultType="dormguest">
+        //
+    </select>
+
+    <update id="updateGuest">
+        update t_guest set gName = #{gName},
+                            gSex = #{gSex},
+                            gTel = #{gTel},
+                            gNote = #{gNote},
+                            gDate = #{gDate},
+                            gType = #{gType},
+                                where gId = #{gId};
+    </update>
+</mapper>
