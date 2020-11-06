@@ -32,7 +32,7 @@
 
     <update id="updateRep">
         update t_repair
-        set dormBuilddName=#{dormBuildName},
+        set dormBuildName=#{dormBuildName},
             dormName=#{dormName},
             repairNote=#{repairName},
             reportDate=#{reportDate},
